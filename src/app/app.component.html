@@ -1,0 +1,219 @@
+<br />
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-7">
+      <!-- Menu -->
+      <ul class="list-group mb-3">
+        <li
+          class="list-group-item py-1"
+          (click)="tab = 'type'"
+          [ngClass]="{ 'list-group-item-info': tab === 'type' }"
+        >
+          Schiffstyp
+        </li>
+        <li
+          class="list-group-item py-1"
+          (click)="tab = 'shipyard'"
+          [ngClass]="{ 'list-group-item-info': tab === 'shipyard' }"
+        >
+          Schiffswerft
+        </li>
+        <li
+          class="list-group-item py-1"
+          (click)="tab = 'problems'"
+          [ngClass]="{ 'list-group-item-info': tab === 'problems' }"
+        >
+          Problem
+        </li>
+        <li
+          class="list-group-item py-1"
+          (click)="tab = 'modules'"
+          [ngClass]="{ 'list-group-item-info': tab === 'modules' }"
+        >
+          Module
+        </li>
+        <li
+          class="list-group-item py-1"
+          (click)="tab = 'features'"
+          [ngClass]="{ 'list-group-item-info': tab === 'features' }"
+        >
+          Merkmale
+        </li>
+      </ul>
+
+      <!-- Ship types -->
+      <ng-container *ngIf="tab === 'type'">
+        <div class="card" *ngFor="let class of ships">
+          <div class="card-header">Klasse: {{ class.name }}</div>
+          <div class="card-body flex-wrap d-flex p-0">
+            <div
+              class="border w-50 p-1"
+              [ngClass]="{ 'bg-info': type.id == ship.type.id }"
+              *ngFor="let type of class.types"
+              (click)="pickShip(type)"
+            >
+              <span
+                ><b>{{ type.name }}</b></span
+              ><br />
+              <span class="small">{{ type.groups }}</span>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+      <!-- Shipyards -->
+      <ng-container *ngIf="tab === 'shipyard'">
+        <div class="card">
+          <div class="card-header">Schiffswerft:</div>
+          <div
+            class="card-body p-2"
+            *ngFor="let shipyard of shipyards; let last = last"
+            [ngClass]="{
+              'border-bottom': !last,
+              'bg-info': shipyard === ship.shipyard
+            }"
+            (click)="selectShipyard(shipyard)"
+          >
+            <b>{{ shipyard.name }}</b> - {{ shipyard.system }}<br />
+            <span class="small">{{ shipyard.text }}</span>
+          </div>
+        </div>
+      </ng-container>
+
+      <!-- Problems -->
+      <ng-container *ngIf="tab === 'problems'">
+        <div class="card">
+          <div class="card-header">Probleme:</div>
+          <div
+            class="card-body p-2"
+            *ngFor="let problem of problems; let last = last"
+            [ngClass]="{
+              'border-bottom': !last,
+              'bg-info': problem === ship.problem
+            }"
+            (click)="selectProblem(problem)"
+          >
+            <b>{{ problem.name }}</b
+            ><br />
+            <span class="small">{{ problem.text }}</span>
+          </div>
+        </div>
+      </ng-container>
+
+      <!-- Modules -->
+      <ng-container *ngIf="tab === 'modules'">
+        <div class="card">
+          <div class="card-header">Module:</div>
+          <div
+            class="card-body p-2"
+            *ngFor="let module of modules; let last = last"
+            [ngClass]="{ 'border-bottom': !last, 'bg-info': module.selected }"
+            (click)="addModule(module)"
+          >
+            <b>{{ module.name }}</b
+            ><br />
+            <span class="small">{{ module.text }}</span
+            ><br />
+            <span class="small"><u>Bonus:</u> {{ module.bonus }}</span
+            ><br />
+            <span class="small"
+              ><u>Kosten:</u> {{ module.cost | currency: 'EUR':'' }}</span
+            >
+          </div>
+        </div>
+      </ng-container>
+
+      <!-- Features -->
+      <ng-container *ngIf="tab === 'features'">
+        <div class="card">
+          <div class="card-header">Merkmale:</div>
+          <div
+            class="card-body p-2"
+            *ngFor="let feature of features; let last = last"
+            [ngClass]="{ 'border-bottom': !last, 'bg-info': feature.selected }"
+            (click)="addFeature(feature)"
+          >
+            <b>{{ feature.name }}</b
+            ><br />
+            <span class="small">Kosten: {{ feature.cost }}%</span><br />
+            <span class="small">{{ feature.benefit }}</span>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="col-5">
+      <div class="card">
+        <div class="card-header">Dein Schiff:</div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <b>Typ:</b><br />
+            {{ ship.type.name }}
+          </li>
+          <li class="list-group-item">
+            <b>Werft:</b><br />
+            {{ ship.shipyard.name }}
+          </li>
+          <li class="list-group-item">
+            <b>Klasse:</b>
+            {{ ship.class.name }}
+          </li>
+          <li class="list-group-item">
+            <b>Problem:</b><br />
+            {{ ship.problem.name }}<br />
+            <span class="small">{{ ship.problem.summary }}</span>
+          </li>
+          <li class="list-group-item">
+            <b>Module ({{ ship.modules.length }}/{{ ship.specs.modules }}):</b
+            ><br />
+            <ul class="pl-3">
+              <li class="small" *ngFor="let module of ship.modules">
+                {{ module.name }}
+                <span class="text-danger" (click)="removeModule(module)"
+                  >X</span
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="list-group-item">
+            <b>Merkmale:</b><br />
+            <ul class="pl-3">
+              <li class="small" *ngFor="let feature of ship.features">
+                {{ feature.name }}
+                <span class="text-danger" (click)="removeFeature(feature)"
+                  >X</span
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <b>Daten</b>
+        </div>
+        <div class="card-body">
+          <ul class="p-0 m-0">
+            <li class="d-block">
+              Manövrierfähigkeit: {{ ship.specs.maneuver }}
+            </li>
+            <li class="d-block">Module: {{ ship.specs.modules }}</li>
+            <li class="d-block">LP: {{ ship.specs.ep }}</li>
+            <li class="d-block">RP: {{ ship.specs.hp }}</li>
+            <li class="d-block">Signatur: {{ ship.specs.signature }}</li>
+            <li class="d-block">Panzerung: {{ ship.specs.armor }}</li>
+            <li class="d-block">Geschwindigkeit: {{ ship.specs.speed }}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <b>Kosten</b>
+        </div>
+        <div class="card-body">
+          {{ ship.totalCost | currency: 'EUR':'' }} Birr
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
