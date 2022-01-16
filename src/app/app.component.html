@@ -195,7 +195,7 @@
           <b>Kosten</b>
         </div>
         <div class="card-body">
-          {{ (ship.totalCost).toLocaleString() || 0 }} Birr
+          {{ (ship.totalCost || 0).toLocaleString() }} Birr
         </div>
       </div>
     </div>
