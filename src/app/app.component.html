@@ -50,11 +50,8 @@
               class="border w-50 p-1"
               [ngClass]="{ 'bg-info': type.id == ship.type.id }"
               *ngFor="let type of class.types"
-              (click)="pickShip(type)"
-            >
-              <span
-                ><b>{{ type.name }}</b></span
-              ><br />
+              (click)="pickShip(type)">
+              <span><b>{{ type.name }}</b></span><br />
               <span class="small">{{ type.groups }}</span>
             </div>
           </div>
@@ -72,8 +69,7 @@
               'border-bottom': !last,
               'bg-info': shipyard === ship.shipyard
             }"
-            (click)="selectShipyard(shipyard)"
-          >
+            (click)="selectShipyard(shipyard)">
             <b>{{ shipyard.name }}</b> - {{ shipyard.system }}<br />
             <span class="small">{{ shipyard.text }}</span>
           </div>
@@ -91,10 +87,8 @@
               'border-bottom': !last,
               'bg-info': problem === ship.problem
             }"
-            (click)="selectProblem(problem)"
-          >
-            <b>{{ problem.name }}</b
-            ><br />
+            (click)="selectProblem(problem)">
+            <b>{{ problem.name }}</b><br />
             <span class="small">{{ problem.text }}</span>
           </div>
         </div>
@@ -108,16 +102,11 @@
             class="card-body p-2"
             *ngFor="let module of modules; let last = last"
             [ngClass]="{ 'border-bottom': !last, 'bg-info': module.selected }"
-            (click)="addModule(module)"
-          >
-            <b>{{ module.name }}</b
-            ><br />
-            <span class="small">{{ module.text }}</span
-            ><br />
-            <span class="small"><u>Bonus:</u> {{ module.bonus }}</span
-            ><br />
-            <span class="small"
-              ><u>Kosten:</u> {{ module.cost | currency: 'EUR':'' }}</span
+            (click)="addModule(module)">
+            <b>{{ module.name }}</b><br />
+            <span class="small">{{ module.text }}</span><br />
+            <span class="small"><u>Bonus:</u> {{ module.bonus || "-"}}</span><br />
+            <span class="small"><u>Kosten:</u> {{ (module.cost).toLocaleString() }} Birr</span
             >
           </div>
         </div>
@@ -135,8 +124,8 @@
           >
             <b>{{ feature.name }}</b
             ><br />
-            <span class="small">Kosten: {{ feature.cost }}%</span><br />
-            <span class="small">{{ feature.benefit }}</span>
+            <span class="small">{{ feature.benefit }}</span><br />
+            <span class="small"><u>Kosten:</u> +{{ feature.cost }}% der Grundkosten</span>
           </div>
         </div>
       </ng-container>
@@ -163,26 +152,21 @@
             {{ ship.problem.name }}<br />
             <span class="small">{{ ship.problem.summary }}</span>
           </li>
+            <li class="list-group-item">
+              <b>Module ({{ ship.modules.length }}/<span *ngIf="ship.shipyard.id === 5 || ship.shipyard.id === 6; else moduleElse">{{ ship.specs.modules + ship.type.class || 0 }}</span><ng-template #moduleElse>{{ ship.specs.modules }}</ng-template>):</b><br /><span style="font-style: italic;" *ngIf="ship.shipyard.id === 6">(davon 2 nur für Waffen)</span>
+              <ul class="pl-3">
+                <li class="small" *ngFor="let module of ship.modules">
+                  {{ module.name }}
+                  <span class="text-danger" (click)="removeModule(module)">X</span>
+                </li>
+              </ul>
+            </li>
           <li class="list-group-item">
-            <b>Module ({{ ship.modules.length }}/{{ ship.specs.modules }}):</b
-            ><br />
-            <ul class="pl-3">
-              <li class="small" *ngFor="let module of ship.modules">
-                {{ module.name }}
-                <span class="text-danger" (click)="removeModule(module)"
-                  >X</span
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="list-group-item">
-            <b>Merkmale:</b><br />
+            <b>Merkmale ({{ ship.features.length }}/3):</b><br />
             <ul class="pl-3">
               <li class="small" *ngFor="let feature of ship.features">
                 {{ feature.name }}
-                <span class="text-danger" (click)="removeFeature(feature)"
-                  >X</span
-                >
+                <span class="text-danger" (click)="removeFeature(feature)">X</span>
               </li>
             </ul>
           </li>
@@ -197,7 +181,7 @@
             <li class="d-block">
               Manövrierfähigkeit: {{ ship.specs.maneuver }}
             </li>
-            <li class="d-block">Module: {{ ship.specs.modules }}</li>
+            <li class="d-block">Module: <span *ngIf="ship.shipyard.id === 5 || ship.shipyard.id === 6; else moduleElse">{{ ship.specs.modules + ship.type.class || 0 }}</span><ng-template #moduleElse>{{ ship.specs.modules }}</ng-template><span style="font-style: italic;" *ngIf="ship.shipyard.id === 6"> (davon 2 nur für Waffen)</span></li>
             <li class="d-block">LP: {{ ship.specs.ep }}</li>
             <li class="d-block">RP: {{ ship.specs.hp }}</li>
             <li class="d-block">Signatur: {{ ship.specs.signature }}</li>
@@ -211,7 +195,7 @@
           <b>Kosten</b>
         </div>
         <div class="card-body">
-          {{ ship.totalCost | currency: 'EUR':'' }} Birr
+          {{ (ship.totalCost).toLocaleString() || 0 }} Birr
         </div>
       </div>
     </div>

@@ -3,7 +3,6 @@ export default [
       id: 1,
       name: 'Andockstation',
       text: 'Das Schiff hat eine Andockluke und einen ausfahrbaren Tunnel, der es ermöglicht, an andere Schiffe anzudocken. Die Station beinhaltet eine Luftschleuse, die eine rudimentäre Dekontaminierung von Besuchern und Fremdobjekten durchführen kann. Ein Schiff ohne Andockstation muss in einem Hangar landen oder kleinere Schiffe in seinen eigenen Hangar einlassen, damit die Mannschaft das Schiff betreten oder verlassen kann.',
-      bonus: '-',
       cost: 150000,
       selected: false
     },
@@ -38,21 +37,21 @@ export default [
     {
       id: 6,
       name: 'Kabinen-Sarg',
-      text: 'Kabinen für die Mannschaft oder Passagiere. Kleine, sargartige Abteile in Reihen und Schichten angeordnet. Eine gemeinsame Hygieneeinheit.',
+      text: 'Kabinen für die Mannschaft oder Passagiere. Kleine, sargartige Abteile in Reihen und Schichten angeordnet. Eine gemeinsame Hygieneeinheit.\nDie Passagierkapazität pro Modul hängt von der Art der Unterbringung und der Klasse des Schiffs ab.',
       cost: 15000,
       selected: false
     },
     {
       id: 7,
       name: 'Kabinen-Standard',
-      text: 'Kabinen für die Mannschaft oder Passagiere. Persönliche Kabinen mit 3 x 2 Metern. Jede Kabine hat ein Bett und eine Hygieneeinheit. Das Modul enthält einen kleinen gemeinsamen Aufenthaltsbereich mit Tisch und Stühlen.',
+      text: 'Kabinen für die Mannschaft oder Passagiere. Persönliche Kabinen mit 3 x 2 Metern. Jede Kabine hat ein Bett und eine Hygieneeinheit. Das Modul enthält einen kleinen gemeinsamen Aufenthaltsbereich mit Tisch und Stühlen.\nDie Passagierkapazität pro Modul hängt von der Art der Unterbringung und der Klasse des Schiffs ab.',
       cost: 25000,
       selected: false
     },
     {
       id: 8,
       name: 'Kabinen-Suite',
-      text: 'Kabinen für die Mannschaft oder Passagiere. Eine große Suite mit einem enormen Bett und Platz für Hygiene und Freizeit, so groß wie es in einem Raumschiff im Horizont möglich ist.',
+      text: 'Kabinen für die Mannschaft oder Passagiere. Eine große Suite mit einem enormen Bett und Platz für Hygiene und Freizeit, so groß wie es in einem Raumschiff im Horizont möglich ist.\nDie Passagierkapazität pro Modul hängt von der Art der Unterbringung und der Klasse des Schiffs ab.',
       cost: 40000,
       selected: false
     },
@@ -67,49 +66,51 @@ export default [
     {
       id: 10,
       name: 'Medizinisches Labor',
-      text: 'Das medizinische Labor ist ein Modul, das bei der Behandlung von Wunden verwendet wird. Mehr dazu findest du in Kapitel 5.',
+      text: 'Das medizinische Labor ist ein Modul, das bei der Behandlung von Wunden verwendet wird.',
+      bonus: '+3 auf Medikurgie',
       cost: 10000,
       selected: false
     },
     {
       id: 11,
       name: 'Rettungskapsel',
-      text: 'Diese „Rettungsboote“ erlauben es der Besatzung eines dem Untergang geweihten Schiffs, dem sicheren Tod zu entkommen. Eine Kapsel zu aktivieren, ist eine normale Aktion. Die Kapseln enthalten Sauerstoff und Vorräte für eine Woche und sind manchmal mit Exoanzügen, Medizin und anderen nützlichen Gegenständen ausgestattet. In jeder Kapsel ist ein Notfallsender installiert, sie haben jedoch keinerlei Antrieb. Die Anzahl von Rettungskapseln pro Modul hängt von der Schiffsklasse ab. Schiffe der Klasse I sind zu klein, um Rettungskapseln aufnehmen zu können.',
+      text: 'Diese „Rettungsboote“ erlauben es der Besatzung eines dem Untergang geweihten Schiffs, dem sicheren Tod zu entkommen.\nEine Kapsel zu aktivieren, ist eine normale Aktion. Die Kapseln enthalten Sauerstoff und Vorräte für eine Woche und sind manchmal mit Exoanzügen, Medizin und anderen nützlichen Gegenständen ausgestattet. In jeder Kapsel ist ein Notfallsender installiert, sie haben jedoch keinerlei Antrieb.\nDie Anzahl von Rettungskapseln pro Modul hängt von der Schiffsklasse ab. Schiffe der Klasse I sind zu klein, um Rettungskapseln aufnehmen zu können.',
       cost: 20000,
       selected: false
     },
     {
       id: 12,
       name: 'Schmuggellager',
-      text: 'Ein verborgenes Lager für sensible Fracht. Da das Lager verborgen sein muss, ist der Großteil des Moduls mit anderen Dingen gefüllt, vielleicht einer Entspannungseinheit oder einfach gewöhnlicher Fracht. Das verborgene Lager kann nur 20% des Gewichtes eines normalen Frachtraums aufnehmen. Um ein verborgenes Lager zu finden, ist ein erfolgreicher Wurf auf Beobachtung notwendig.',
+      text: 'Ein verborgenes Lager für sensible Fracht.\nDa das Lager verborgen sein muss, ist der Großteil des Moduls mit anderen Dingen gefüllt, vielleicht einer Entspannungseinheit oder einfach gewöhnlicher Fracht. Das verborgene Lager kann nur 20% des Gewichtes eines normalen Frachtraums aufnehmen.\nUm ein verborgenes Lager zu finden, ist ein erfolgreicher Wurf auf Beobachtung notwendig.',
       cost: 5000,
       selected: false
     },
     {
       id: 13,
       name: 'Stasiskammer',
-      text: 'Hiding contraband',
+      text: 'Die Stasiskammer enthält Betten für den Kryoschlaf.\nOhne Stasis sind Portalsprünge letztlich Selbstmord, oder zumindest ein Ticket ohne Rückfahrschein in Richtung chronischem Hyperwahnsinn. Stasis wird auch manchmal während langer interplanetarer Reisen verwendet. Schiffe, deren Ziel mehrere Sprünge entfernt liegt, wecken die Passagiere und Besatzungsmitglieder, deren Anwesenheit nicht essentiell ist, normalerweise erst auf, wenn der letzte Sprung abgeschlossen ist.\nDie Anzahl von Stasisbetten pro Modul hängt von der Schiffsklasse ab.',
       cost: 25000,
       selected: false
     },
     {
       id: 14,
       name: 'Torpedo- und Minensystem',
-      text: 'Needed for portal jumps',
+      text: 'Ein Modul zur Lagerung und zum Abfeuern von Torpedos und Minen.\nKann bis zu vier Torpedos oder acht Minen aufnehmen (eine Mine zählt wie ein halber Torpedo). Die tatsächlichen Torpedos und Minen müssen einzeln gekauft werden.\nEin kritischer Treffer im Torpedoraum zerstört alle Torpedos und könnte eine Katastrophe für das ganze Schiff darstellen.',
       cost: 20000,
       selected: false
     },
     {
       id: 15,
       name: 'Wartungsstation',
-      text: 'Storing and firing torpedoes/mines',
+      text: 'Die Wartungsstation ist eine nicht unter Druck stehende Frachteinheit, die mit allem beladen ist, was das Schiff für Reparaturen benötigen könnte.\nDas Modul unterstützt den Maschinisten bei Reparaturen während Raumreisen. Besatzungen, die weit durch den Weltraum reisen, tun gut daran, immer eine gut ausgestattete Wartungsstation zu haben, um ihr Schiff instand zu halten.',
       cost: 45000,
       selected: false
     },
     {
       id: 16,
       name: 'Werkstatt',
-      text: 'Fixing broken gear and systems',
+      text: 'Dieses Modul ist eine vollständige Werkstatt, um an Bord Reparaturen vorzunehmen.\nDie Werkstatt kann nur für Reparaturen bis zum gewöhnlichen Technologiegrad verwendet werden.',
+      bonus: 'Das Modul gibt +1 auf Technologie-Würfe, auch auf Reparaturen am Schiff selbst.',
       cost: 75000,
       selected: false
     },
