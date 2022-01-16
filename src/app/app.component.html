@@ -153,7 +153,7 @@
             <span class="small">{{ ship.problem.summary }}</span>
           </li>
             <li class="list-group-item">
-              <b>Module ({{ ship.modules.length }}/<span *ngIf="ship.shipyard.id === 5 || ship.shipyard.id === 6; else moduleElse">{{ ship.specs.modules + ship.type.class || 0 }}</span><ng-template #moduleElse>{{ ship.specs.modules }}</ng-template>):</b><br /><span style="font-style: italic;" *ngIf="ship.shipyard.id === 6">(davon 2 nur für Waffen)</span>
+              <b>Module ({{ ship.modules.length }}/<span *ngIf="ship.shipyard.id === 5 || ship.shipyard.id === 6; else moduleElse">{{ ship.specs.modules + ship.type.class || 0 }}</span><ng-template #moduleElse>{{ ship.specs.modules }}</ng-template>):</b><br /><span style="font-style: italic;" *ngIf="ship.shipyard.id === 6">(davon 2 nur für Waffensysteme)</span>
               <ul class="pl-3">
                 <li class="small" *ngFor="let module of ship.modules">
                   {{ module.name }}
@@ -181,7 +181,7 @@
             <li class="d-block">
               Manövrierfähigkeit: {{ ship.specs.maneuver }}
             </li>
-            <li class="d-block">Module: <span *ngIf="ship.shipyard.id === 5 || ship.shipyard.id === 6; else moduleElse">{{ ship.specs.modules + ship.type.class || 0 }}</span><ng-template #moduleElse>{{ ship.specs.modules }}</ng-template><span style="font-style: italic;" *ngIf="ship.shipyard.id === 6"> (davon 2 nur für Waffen)</span></li>
+            <li class="d-block">Module: <span *ngIf="ship.shipyard.id === 5 || ship.shipyard.id === 6; else moduleElse">{{ ship.specs.modules + ship.type.class || 0 }}</span><ng-template #moduleElse>{{ ship.specs.modules }}</ng-template></li>
             <li class="d-block">LP: {{ ship.specs.ep }}</li>
             <li class="d-block">RP: {{ ship.specs.hp }}</li>
             <li class="d-block">Signatur: {{ ship.specs.signature }}</li>

@@ -116,134 +116,143 @@ export default [
     },
     {
       id: 17,
-      name: 'Weapon - Countermeasure Dispenser',
-      text: '',
+      name: 'Waffensystem - Täuschkörperwerfer',
+      text: 'Eine mächtige Sensorboje, die vom Schiff abgefeuert wird, um nahende Torpedos wegzulocken.\nEin „Treffer“ beim Abfeuern dieser Waffe bedeutet, dass der Zieltorpedo sein Ziel verfehlt. Kann auch für Defensivfeuer verwendet werden (siehe Seite 170).',
       cost: 5000,
       selected: false
     },
     {
       id: 18,
-      name: 'Weapon - Data Pulse',
-      text: '',
+      name: 'Waffensystem - Datenimpuls',
+      text: 'Ein Impuls schadhafter Daten, die die Systeme eines gegnerischen Schiffes beschädigen. Verursacht Systemschaden anstatt Rumpfschaden.',
+      bonus: 'Panzerung hat keinen Effekt.',
       cost: 50000,
       selected: false
     },
     {
       id: 19,
-      name: 'Weapon - Data Meme',
-      text: '',
+      name: 'Waffensystem - Datenmem',
+      text: 'Ein Mem, ein selbst lernendes Programm, wird in die Systeme eines gegnerischen Schiffs gesendet.\nEin Datenmem-Angriff hat zwei Phasen. Wenn der Angriff erfolgreich ist, wird das Zielmodul deaktiviert, als hätte es einen kritischen Treffer erlitten (siehe Seite 172). Die drei erforderlichen Module Brücke, Reaktor und Gravitonprojektor können nicht mit einem Datenmem angegriffen werden.',
       cost: 75000,
       selected: false
     },
     {
       id: 20,
-      name: 'Weapon - Ion Missile',
-      text: '',
+      name: 'Waffensystem - Ionenrakete',
+      text: 'Eine Rakete, die beim Einschlag eine mächtige ionisierte Entladung abgibt.\nVerursacht gleichermaßen Schaden an Systemen und Rumpf.',
+      bonus: 'Verursacht sowohl System- als auch Rumpfschaden.',
       cost: 7500,
       selected: false
     },
     {
       id: 21,
-      name: 'Weapon - Accelerator Cannon',
-      text: '',
+      name: 'Waffensystem - Beschleunigerkanone',
+      text: 'Eine mächtige, magnetische Schienenkanone, die metallische Projektile mit hoher Geschwindigkeit abfeuert.',
       cost: 25000,
       selected: false
     },
     {
       id: 22,
-      name: 'Weapon - Meson Cannon*',
-      text: '',
+      name: 'Waffensystem - Mesonenkanone',
+      text: 'Eine Kanone, die Disruptorstrahlen abfeuert. Ignoriert den Effekt von Panzerung.',
+      bonus: 'Verursacht sowohl System- als auch Rumpfschaden. Panzerung hat keinen Effekt.',
       cost: 0,
       selected: false
     },
     {
       id: 23,
-      name: 'Weapon - Thermal Cannon',
-      text: '',
+      name: 'Waffensystem - Thermalkanone',
+      text: 'Eine Kanone, die Strahlen aus überhitztem Plasma abfeuert.',
       cost: 70000,
       selected: false
     },
     {
       id: 24,
-      name: 'Weapon - Heavy Accelerator Cannon',
-      text: '',
+      name: 'Waffensystem - Schwere Beschleunigerkanone',
+      text: 'Eine Kanone mit einem längeren und größeren Beschleuniger, der mehr Schaden verursacht.',
       cost: 40000,
       selected: false
     },
     {
       id: 25,
-      name: 'Weapon - Autocannon',
-      text: '',
+      name: 'Waffensystem - Autokanone',
+      text: 'Eine kleine Vulkan-Kanone, die verwendet wird, um Enterversuche oder nahende Torpedos abzuwehren\nKann auch für Defensivfeuer verwendet werden (siehe Seite 170).',
       cost: 15000,
       selected: false
     },
     {
       id: 26,
-      name: 'Weapon - Ion Cannon',
-      text: '',
+      name: 'Waffensystem - Ionenkanone',
+      text: 'Eine Kanone, die ionisierte Strahlung abfeuert. Verursacht Schaden gleichermaßen an Systemen und Rumpf.',
+      bonus: 'Verursacht sowohl System- als auch Rumpfschaden.',
       cost: 40000,
       selected: false
     },
     {
       id: 27,
-      name: 'Weapon - Nestera Mangler',
-      text: '',
+      name: 'Waffensystem - Nestera Zerfleischer',
+      text: 'Eine Beschleunigerkanone mit hoher Feuergeschwindigkeit und explosiven Geschossen, die sehr hohen Schaden verursachen.',
       cost: 50000,
       selected: false
     },
     {
       id: 28,
-      name: 'Weapon - Torpedo',
-      text: '',
+      name: 'Waffensystem - Torpedo',
+      text: 'Ein konventioneller Torpedo.',
+      bonus: 'Bewegt sich 2 KE pro Runde.',
       cost: 5000,
       selected: false
     },
     {
       id: 29,
-      name: 'Weapon - Plasma Torpedo',
-      text: '',
+      name: 'Waffensystem - Plasmatorpedo',
+      text: 'Ein Torpedo mit einem Plasmagefechtskopf.\nVerringert den Panzerungswert des gegnerischen Schiffs um 1, bis Reparaturen vorgenommen werden.',
+      bonus: 'Bewegt sich 2 KE pro Runde. Degradiert Panzerung.',
       cost: 10000,
       selected: false
     },
     {
       id: 30,
-      name: 'Weapon - Ion Torpedo',
-      text: '',
+      name: 'Waffensystem - Ionentorpedo',
+      text: 'Ein Torpedo mit einem ionisierten Gefechtskopf.\nVerursacht Schaden gleichermaßen an Systemen und Rumpf.',
+      bonus: 'Bewegt sich 2 KE pro Runde.',
       cost: 8000,
       selected: false
     },
     {
       id: 31,
-      name: 'Weapon - Antimatter Torpedo*',
-      text: '',
+      name: 'Waffensystem - Antimaterietorpedo',
+      text: 'Ein Torpedo mit einem Antimateriegefechtskopf.\nDie Explosion verursacht bei allen Schiffen in kurzer Entfernung zur Explosion Schaden.',
+      bonus: 'Bewegt sich 2 KE pro Runde.',
       cost: 400000,
       selected: false
     },
     {
       id: 32,
-      name: 'Weapon - Nuclear Torpedo',
-      text: '',
+      name: 'Waffensystem - Nukleartorpedo',
+      text: 'Ein Torpedo mit einem nuklearen Gefechtskopf.\nDie Explosion verursacht bei allen Schiffen in Kontaktreichweite zur Explosion Schaden.',
+      bonus: 'Bewegt sich 2 KE pro Runde.',
       cost: 30000,
       selected: false
     },
     {
       id: 33,
-      name: 'Weapon - Mine',
-      text: '',
+      name: 'Waffensystem - Mine',
+      text: 'Konventionelle Mine.',
       cost: 3000,
       selected: false
     },
     {
       id: 34,
-      name: 'Weapon - Antimatter Mine*',
-      text: '',
+      name: 'Waffensystem - Antimateriemine',
+      text: 'Eine Mine mit einem Antimateriegefechtskopf.\nDie Explosion verursacht bei allen Schiffen in kurzer Reichweite zur Explosion Schaden.',
       cost: 300000,
       selected: false
     },
     {
       id: 35,
-      name: 'Weapon - Nuclear Mine',
-      text: 'test',
+      name: 'Waffensystem - Nuklearmine',
+      text: 'Eine Mine mit einem nuklearen Gefechtskopf.\nDie Explosion verursacht bei allen Schiffen in Kontaktreichweite zur Explosion Schaden.',
       cost: 20000,
       selected: false
     }
