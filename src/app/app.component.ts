@@ -49,23 +49,6 @@ export class AppComponent implements OnInit {
 
     this.ship.class = classData;
     this.ship.type = ship;
-    this.ship.modules = [
-      {
-        id: 1,
-        name: 'Brücke',
-        cost: 0
-      }, 
-      {
-        id: 2,
-        name: 'Reaktor',
-        cost: 0,
-      },
-      {
-        id: 3,
-        name: 'Gravitonprojektor',
-        cost: 0,
-      }
-    ];
 
     this.calculateSpecs();
     this.calculateCost();
