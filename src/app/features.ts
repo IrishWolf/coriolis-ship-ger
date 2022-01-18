@@ -260,7 +260,12 @@ export default [
     name: 'Überladener Reaktor',
     benefit: 'Verleiht dem Schiff +1 Leistungspunkt',
     cost: 10,
-    bonusses: [],
+    bonusses: [
+      {
+        spec: 'ep',
+        bonus: 1
+      }
+    ],
     selected: false
   },
   {
