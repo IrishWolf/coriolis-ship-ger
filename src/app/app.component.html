@@ -105,7 +105,7 @@
             (click)="addModule(module)">
             <b>{{ module.name }}</b><br />
             <span class="small">{{ module.text }}</span><br />
-            <span class="small"><u>Bonus:</u> {{ module.bonus || "-"}}</span><br />
+            <span class="small" *ngIf="module.bonus"><u>Bonus:</u> {{ module.bonus }}<br /></span>
             <span class="small"><u>Kosten:</u> {{ (module.cost).toLocaleString() }} Birr</span
             >
           </div>
@@ -124,8 +124,10 @@
           >
             <b>{{ feature.name }}</b
             ><br />
-            <span class="small">{{ feature.benefit }}</span><br />
-            <span class="small"><u>Kosten:</u> +{{ feature.cost }}% der Grundkosten</span>
+            <span class="small">{{ feature.text }}</span><br />
+            <span class="small"><u>Bonus:</u> {{ feature.benefit }}</span><br />
+            <span class="small" *ngIf="feature.requirement"><u>Voraussetzung:</u> {{ feature.requirement }}<br /></span>
+            <span class="small"><u>Kosten:</u> +{{ feature.cost }}% auf die Grundkosten</span>
           </div>
         </div>
       </ng-container>
