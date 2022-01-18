@@ -270,7 +270,7 @@ export default [
     cost: 20,
     bonusses: [
       {
-        spec: 'ep',
+        spec: 'modules',
         bonus: 1
       }
     ],
