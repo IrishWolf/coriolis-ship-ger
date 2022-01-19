@@ -157,6 +157,7 @@ export default [
     name: 'Fortschrittliche Werkstatt',
     text: 'Eine hochmoderne Werkstatt mit all den neuesten Werkzeugen wie Nanitensägen, Quecksilberdüsen, intelligenten Werkzeugen und so weiter.',
     benefit: 'Ermöglicht die Reparatur von Ausrüstung mit dem Technologiegrad Fortschrittlich',
+    requirement: 'Modul Werkstatt',
     cost: 10,
     bonusses: [],
     selected: false
@@ -267,6 +268,7 @@ export default [
     name: 'Traumalabor',
     text: 'Das medizinische Labor wurde zu einem Traumalabor aufgerüstet.',
     benefit: '+4 Bonus auf Medikurgie-Würfe (+5 bei kritischen Wunden)',
+    requirement: 'Modul Medizinisches Labor',
     cost: 10,
     bonusses: [],
     selected: false

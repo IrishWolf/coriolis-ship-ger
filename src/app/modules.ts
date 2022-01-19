@@ -23,35 +23,36 @@ export default [
     {
       id: 4,
       name: 'Frachtraum',
-      text: 'Der Bereich hat Atmosphäre und ein Klimakontrollsystem, damit die Fracht die Reise überlebt. Wie viel Fracht der Frachtraum aufnehmen kann, hängt von der Schiffsklasse ab.',
+      text: 'Der Bereich hat Atmosphäre und ein Klimakontrollsystem, damit die Fracht die Reise überlebt. Wie viel Fracht der Frachtraum aufnehmen kann, hängt von der Schiffsklasse ab.\nKann mehrfach erworben werden.',
       cost: 5000,
       selected: false
     },
     {
       id: 5,
       name: 'Hangar',
-      text: 'Kleinere Raumschiffe in das eigene Schiff einlassen zu können, hat viele Vorteile. Wie groß die Schiffe sein dürfen, die ein Hangar aufnehmen kann, hängt von der Schiffsklasse ab. Das Schiff, das in den Hangar einfliegen kann, muss mindestens zwei Klassen unter deiner Schiffsklasse liegen. Normalerweise kann sich nur ein Schiff auf einmal im Hangar befinden, doch für jeden zusätzlichen Schritt, den die Klassen auseinander liegen, wird die Zahl der Schiffe, die in den Hangar passt, mit vier multipliziert. Somit kann ein Schiffshangar der Klasse V ein Schiff der Klasse III aufnehmen, vier Schiffe der Klasse II oder 16 Schiffe der Klasse I. Du kannst mehr als einen Hangar in einem Schiff haben. Hangars sind sehr praktisch, wenn es um Reparaturen geht (siehe Seite 168).',
+      text: 'Kleinere Raumschiffe in das eigene Schiff einlassen zu können, hat viele Vorteile. Wie groß die Schiffe sein dürfen, die ein Hangar aufnehmen kann, hängt von der Schiffsklasse ab.\nDas Schiff, das in den Hangar einfliegen kann, muss mindestens zwei Klassen unter deiner Schiffsklasse liegen. Normalerweise kann sich nur ein Schiff auf einmal im Hangar befinden, doch für jeden zusätzlichen Schritt, den die Klassen auseinander liegen, wird die Zahl der Schiffe, die in den Hangar passt, mit vier multipliziert. Somit kann ein Schiffshangar der Klasse V ein Schiff der Klasse III aufnehmen, vier Schiffe der Klasse II oder 16 Schiffe der Klasse I.\nDu kannst mehr als einen Hangar in einem Schiff haben. Hangars sind sehr praktisch, wenn es um Reparaturen geht.',
+      requirement: 'Schiff Klasse III oder höher',
       cost: 10000,
       selected: false
     },
     {
       id: 6,
       name: 'Kabinen-Sarg',
-      text: 'Kabinen für die Mannschaft oder Passagiere. Kleine, sargartige Abteile in Reihen und Schichten angeordnet. Eine gemeinsame Hygieneeinheit.\nDie Passagierkapazität pro Modul hängt von der Art der Unterbringung und der Klasse des Schiffs ab.',
+      text: 'Kabinen für die Mannschaft oder Passagiere. Kleine, sargartige Abteile in Reihen und Schichten angeordnet. Eine gemeinsame Hygieneeinheit.\nDie Passagierkapazität pro Modul hängt von der Art der Unterbringung und der Klasse des Schiffs ab.\nKann mehrfach erworben werden.',
       cost: 15000,
       selected: false
     },
     {
       id: 7,
       name: 'Kabinen-Standard',
-      text: 'Kabinen für die Mannschaft oder Passagiere. Persönliche Kabinen mit 3 x 2 Metern. Jede Kabine hat ein Bett und eine Hygieneeinheit. Das Modul enthält einen kleinen gemeinsamen Aufenthaltsbereich mit Tisch und Stühlen.\nDie Passagierkapazität pro Modul hängt von der Art der Unterbringung und der Klasse des Schiffs ab.',
+      text: 'Kabinen für die Mannschaft oder Passagiere. Persönliche Kabinen mit 3 x 2 Metern. Jede Kabine hat ein Bett und eine Hygieneeinheit. Das Modul enthält einen kleinen gemeinsamen Aufenthaltsbereich mit Tisch und Stühlen.\nDie Passagierkapazität pro Modul hängt von der Art der Unterbringung und der Klasse des Schiffs ab.\nKann mehrfach erworben werden.',
       cost: 25000,
       selected: false
     },
     {
       id: 8,
       name: 'Kabinen-Suite',
-      text: 'Kabinen für die Mannschaft oder Passagiere. Eine große Suite mit einem enormen Bett und Platz für Hygiene und Freizeit, so groß wie es in einem Raumschiff im Horizont möglich ist.\nDie Passagierkapazität pro Modul hängt von der Art der Unterbringung und der Klasse des Schiffs ab.',
+      text: 'Kabinen für die Mannschaft oder Passagiere. Eine große Suite mit einem enormen Bett und Platz für Hygiene und Freizeit, so groß wie es in einem Raumschiff im Horizont möglich ist.\nDie Passagierkapazität pro Modul hängt von der Art der Unterbringung und der Klasse des Schiffs ab.\nKann mehrfach erworben werden.',
       cost: 40000,
       selected: false
     },
@@ -81,14 +82,14 @@ export default [
     {
       id: 12,
       name: 'Schmuggellager',
-      text: 'Ein verborgenes Lager für sensible Fracht.\nDa das Lager verborgen sein muss, ist der Großteil des Moduls mit anderen Dingen gefüllt, vielleicht einer Entspannungseinheit oder einfach gewöhnlicher Fracht. Das verborgene Lager kann nur 20% des Gewichtes eines normalen Frachtraums aufnehmen.\nUm ein verborgenes Lager zu finden, ist ein erfolgreicher Wurf auf Beobachtung notwendig.',
+      text: 'Ein verborgenes Lager für sensible Fracht.\nDa das Lager verborgen sein muss, ist der Großteil des Moduls mit anderen Dingen gefüllt, vielleicht einer Entspannungseinheit oder einfach gewöhnlicher Fracht. Das verborgene Lager kann nur 20% des Gewichtes eines normalen Frachtraums aufnehmen.\nUm ein verborgenes Lager zu finden, ist ein erfolgreicher Wurf auf Beobachtung notwendig.\nKann mehrfach erworben werden.',
       cost: 5000,
       selected: false
     },
     {
       id: 13,
       name: 'Stasiskammer',
-      text: 'Die Stasiskammer enthält Betten für den Kryoschlaf.\nOhne Stasis sind Portalsprünge letztlich Selbstmord, oder zumindest ein Ticket ohne Rückfahrschein in Richtung chronischem Hyperwahnsinn. Stasis wird auch manchmal während langer interplanetarer Reisen verwendet. Schiffe, deren Ziel mehrere Sprünge entfernt liegt, wecken die Passagiere und Besatzungsmitglieder, deren Anwesenheit nicht essentiell ist, normalerweise erst auf, wenn der letzte Sprung abgeschlossen ist.\nDie Anzahl von Stasisbetten pro Modul hängt von der Schiffsklasse ab.',
+      text: 'Die Stasiskammer enthält Betten für den Kryoschlaf.\nOhne Stasis sind Portalsprünge letztlich Selbstmord, oder zumindest ein Ticket ohne Rückfahrschein in Richtung chronischem Hyperwahnsinn. Stasis wird auch manchmal während langer interplanetarer Reisen verwendet. Schiffe, deren Ziel mehrere Sprünge entfernt liegt, wecken die Passagiere und Besatzungsmitglieder, deren Anwesenheit nicht essentiell ist, normalerweise erst auf, wenn der letzte Sprung abgeschlossen ist.\nDie Anzahl von Stasisbetten pro Modul hängt von der Schiffsklasse ab.\nKann mehrfach erworben werden.',
       cost: 25000,
       selected: false
     },
@@ -117,14 +118,14 @@ export default [
     {
       id: 17,
       name: 'Waffensystem - Täuschkörperwerfer',
-      text: 'Eine mächtige Sensorboje, die vom Schiff abgefeuert wird, um nahende Torpedos wegzulocken.\nEin „Treffer“ beim Abfeuern dieser Waffe bedeutet, dass der Zieltorpedo sein Ziel verfehlt. Kann auch für Defensivfeuer verwendet werden (siehe Seite 170).',
+      text: 'Eine mächtige Sensorboje, die vom Schiff abgefeuert wird, um nahende Torpedos wegzulocken.\nEin „Treffer“ beim Abfeuern dieser Waffe bedeutet, dass der Zieltorpedo sein Ziel verfehlt. Kann auch für Defensivfeuer verwendet werden.\nWaffensysteme können mehrfach erworben werden.',
       cost: 5000,
       selected: false
     },
     {
       id: 18,
       name: 'Waffensystem - Datenimpuls',
-      text: 'Ein Impuls schadhafter Daten, die die Systeme eines gegnerischen Schiffes beschädigen. Verursacht Systemschaden anstatt Rumpfschaden.',
+      text: 'Ein Impuls schadhafter Daten, die die Systeme eines gegnerischen Schiffes beschädigen. Verursacht Systemschaden anstatt Rumpfschaden.\nWaffensysteme können mehrfach erworben werden.',
       bonus: 'Panzerung hat keinen Effekt.',
       cost: 50000,
       selected: false
@@ -132,7 +133,7 @@ export default [
     {
       id: 19,
       name: 'Waffensystem - Datenmem',
-      text: 'Ein Mem, ein selbst lernendes Programm, wird in die Systeme eines gegnerischen Schiffs gesendet.\nEin Datenmem-Angriff hat zwei Phasen. Wenn der Angriff erfolgreich ist, wird das Zielmodul deaktiviert, als hätte es einen kritischen Treffer erlitten (siehe Seite 172). Die drei erforderlichen Module Brücke, Reaktor und Gravitonprojektor können nicht mit einem Datenmem angegriffen werden.',
+      text: 'Ein Mem, ein selbst lernendes Programm, wird in die Systeme eines gegnerischen Schiffs gesendet.\nEin Datenmem-Angriff hat zwei Phasen. Wenn der Angriff erfolgreich ist, wird das Zielmodul deaktiviert, als hätte es einen kritischen Treffer erlitten. Die drei erforderlichen Module Brücke, Reaktor und Gravitonprojektor können nicht mit einem Datenmem angegriffen werden.\nWaffensysteme können mehrfach erworben werden.',
       cost: 75000,
       selected: false
     },
@@ -140,21 +141,21 @@ export default [
       id: 20,
       name: 'Waffensystem - Ionenrakete',
       text: 'Eine Rakete, die beim Einschlag eine mächtige ionisierte Entladung abgibt.\nVerursacht gleichermaßen Schaden an Systemen und Rumpf.',
-      bonus: 'Verursacht sowohl System- als auch Rumpfschaden.',
+      bonus: 'Verursacht sowohl System- als auch Rumpfschaden.\nWaffensysteme können mehrfach erworben werden.',
       cost: 7500,
       selected: false
     },
     {
       id: 21,
       name: 'Waffensystem - Beschleunigerkanone',
-      text: 'Eine mächtige, magnetische Schienenkanone, die metallische Projektile mit hoher Geschwindigkeit abfeuert.',
+      text: 'Eine mächtige, magnetische Schienenkanone, die metallische Projektile mit hoher Geschwindigkeit abfeuert.\nWaffensysteme können mehrfach erworben werden.',
       cost: 25000,
       selected: false
     },
     {
       id: 22,
       name: 'Waffensystem - Mesonenkanone',
-      text: 'Eine Kanone, die Disruptorstrahlen abfeuert. Ignoriert den Effekt von Panzerung.',
+      text: 'Eine Kanone, die Disruptorstrahlen abfeuert. Ignoriert den Effekt von Panzerung.\nWaffensysteme können mehrfach erworben werden.',
       bonus: 'Verursacht sowohl System- als auch Rumpfschaden. Panzerung hat keinen Effekt.',
       cost: 0,
       selected: false
@@ -162,21 +163,21 @@ export default [
     {
       id: 23,
       name: 'Waffensystem - Thermalkanone',
-      text: 'Eine Kanone, die Strahlen aus überhitztem Plasma abfeuert.',
+      text: 'Eine Kanone, die Strahlen aus überhitztem Plasma abfeuert.\nWaffensysteme können mehrfach erworben werden.',
       cost: 70000,
       selected: false
     },
     {
       id: 24,
       name: 'Waffensystem - Schwere Beschleunigerkanone',
-      text: 'Eine Kanone mit einem längeren und größeren Beschleuniger, der mehr Schaden verursacht.',
+      text: 'Eine Kanone mit einem längeren und größeren Beschleuniger, der mehr Schaden verursacht.\nWaffensysteme können mehrfach erworben werden.',
       cost: 40000,
       selected: false
     },
     {
       id: 25,
       name: 'Waffensystem - Autokanone',
-      text: 'Eine kleine Vulkan-Kanone, die verwendet wird, um Enterversuche oder nahende Torpedos abzuwehren\nKann auch für Defensivfeuer verwendet werden (siehe Seite 170).',
+      text: 'Eine kleine Vulkan-Kanone, die verwendet wird, um Enterversuche oder nahende Torpedos abzuwehren\nKann auch für Defensivfeuer verwendet werden.\nWaffensysteme können mehrfach erworben werden.',
       cost: 15000,
       selected: false
     },
@@ -184,75 +185,83 @@ export default [
       id: 26,
       name: 'Waffensystem - Ionenkanone',
       text: 'Eine Kanone, die ionisierte Strahlung abfeuert. Verursacht Schaden gleichermaßen an Systemen und Rumpf.',
-      bonus: 'Verursacht sowohl System- als auch Rumpfschaden.',
+      bonus: 'Verursacht sowohl System- als auch Rumpfschaden.\nWaffensysteme können mehrfach erworben werden.',
       cost: 40000,
       selected: false
     },
     {
       id: 27,
       name: 'Waffensystem - Nestera Zerfleischer',
-      text: 'Eine Beschleunigerkanone mit hoher Feuergeschwindigkeit und explosiven Geschossen, die sehr hohen Schaden verursachen.',
+      text: 'Eine Beschleunigerkanone mit hoher Feuergeschwindigkeit und explosiven Geschossen, die sehr hohen Schaden verursachen.\nWaffensysteme können mehrfach erworben werden.',
       cost: 50000,
       selected: false
     },
     {
       id: 28,
       name: 'Waffensystem - Torpedo',
-      text: 'Ein konventioneller Torpedo.',
+      text: 'Ein konventioneller Torpedo.\nPreis gilt pro Torpedo.',
       bonus: 'Bewegt sich 2 KE pro Runde.',
+      requirement: 'Modul Torpedo- und Minensystem',
       cost: 5000,
       selected: false
     },
     {
       id: 29,
       name: 'Waffensystem - Plasmatorpedo',
-      text: 'Ein Torpedo mit einem Plasmagefechtskopf.\nVerringert den Panzerungswert des gegnerischen Schiffs um 1, bis Reparaturen vorgenommen werden.',
+      text: 'Ein Torpedo mit einem Plasmagefechtskopf.\nVerringert den Panzerungswert des gegnerischen Schiffs um 1, bis Reparaturen vorgenommen werden.\nPreis gilt pro Torpedo.',
       bonus: 'Bewegt sich 2 KE pro Runde. Degradiert Panzerung.',
+      requirement: 'Modul Torpedo- und Minensystem',
       cost: 10000,
       selected: false
     },
     {
       id: 30,
       name: 'Waffensystem - Ionentorpedo',
-      text: 'Ein Torpedo mit einem ionisierten Gefechtskopf.\nVerursacht Schaden gleichermaßen an Systemen und Rumpf.',
+      text: 'Ein Torpedo mit einem ionisierten Gefechtskopf.\nVerursacht Schaden gleichermaßen an Systemen und Rumpf.\nPreis gilt pro Torpedo.',
       bonus: 'Bewegt sich 2 KE pro Runde.',
+      requirement: 'Modul Torpedo- und Minensystem',
       cost: 8000,
       selected: false
     },
     {
       id: 31,
       name: 'Waffensystem - Antimaterietorpedo',
-      text: 'Ein Torpedo mit einem Antimateriegefechtskopf.\nDie Explosion verursacht bei allen Schiffen in kurzer Entfernung zur Explosion Schaden.',
+      text: 'Ein Torpedo mit einem Antimateriegefechtskopf.\nDie Explosion verursacht bei allen Schiffen in kurzer Entfernung zur Explosion Schaden.\nPreis gilt pro Torpedo.',
       bonus: 'Bewegt sich 2 KE pro Runde.',
+      requirement: 'Modul Torpedo- und Minensystem',
       cost: 400000,
       selected: false
     },
     {
       id: 32,
       name: 'Waffensystem - Nukleartorpedo',
-      text: 'Ein Torpedo mit einem nuklearen Gefechtskopf.\nDie Explosion verursacht bei allen Schiffen in Kontaktreichweite zur Explosion Schaden.',
+      text: 'Ein Torpedo mit einem nuklearen Gefechtskopf.\nDie Explosion verursacht bei allen Schiffen in Kontaktreichweite zur Explosion Schaden.\nPreis gilt pro Torpedo.',
       bonus: 'Bewegt sich 2 KE pro Runde.',
+      requirement: 'Modul Torpedo- und Minensystem',
       cost: 30000,
       selected: false
     },
     {
       id: 33,
       name: 'Waffensystem - Mine',
-      text: 'Konventionelle Mine.',
+      text: 'Konventionelle Mine.\nPreis gilt pro Mine.',
+      requirement: 'Modul Torpedo- und Minensystem',
       cost: 3000,
       selected: false
     },
     {
       id: 34,
       name: 'Waffensystem - Antimateriemine',
-      text: 'Eine Mine mit einem Antimateriegefechtskopf.\nDie Explosion verursacht bei allen Schiffen in kurzer Reichweite zur Explosion Schaden.',
+      text: 'Eine Mine mit einem Antimateriegefechtskopf.\nDie Explosion verursacht bei allen Schiffen in kurzer Reichweite zur Explosion Schaden.\nPreis gilt pro Mine.',
+      requirement: 'Modul Torpedo- und Minensystem',
       cost: 300000,
       selected: false
     },
     {
       id: 35,
       name: 'Waffensystem - Nuklearmine',
-      text: 'Eine Mine mit einem nuklearen Gefechtskopf.\nDie Explosion verursacht bei allen Schiffen in Kontaktreichweite zur Explosion Schaden.',
+      text: 'Eine Mine mit einem nuklearen Gefechtskopf.\nDie Explosion verursacht bei allen Schiffen in Kontaktreichweite zur Explosion Schaden.\nPreis gilt pro Mine.',
+      requirement: 'Modul Torpedo- und Minensystem',
       cost: 20000,
       selected: false
     }

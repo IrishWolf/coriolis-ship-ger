@@ -106,6 +106,7 @@
             <b>{{ module.name }}</b><br />
             <span class="small">{{ module.text }}</span><br />
             <span class="small" *ngIf="module.bonus"><u>Bonus:</u> {{ module.bonus }}<br /></span>
+            <span class="small" *ngIf="module.requirement"><u>Voraussetzung:</u> {{ module.requirement }}<br /></span>
             <span class="small"><u>Kosten:</u> {{ (module.cost).toLocaleString() }} Birr</span
             >
           </div>
